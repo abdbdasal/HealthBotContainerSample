@@ -18,10 +18,9 @@ steps:
 
   - name: Set up Node.js version
     uses: actions/setup-node@v3
-    with:
+with:
       node-version: 'lts'  # Correct format
-
-
+      
       - name: npm install, build, and test
         run: |
           npm install
