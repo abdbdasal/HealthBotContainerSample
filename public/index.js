@@ -83,9 +83,9 @@ function initBotConversation() {
     });
 
     const styleOptions = {
-        botAvatarImage: 'https://docs.microsoft.com/en-us/azure/bot-service/v4sdk/media/logo_bot.svg?view=azure-bot-service-4.0',
+        botAvatarImage: 'https://raw.githubusercontent.com/abdbdasal/HealthBotContainerSample/refs/heads/master/Amal-Fav-Icon-100px.png',
         hideSendBox: false,
-        botAvatarInitials: 'Bot',
+        botAvatarInitials: 'Amal',
         userAvatarInitials: 'You',
         backgroundColor: '#F8F8F8'
     };
