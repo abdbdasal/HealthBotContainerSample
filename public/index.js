@@ -1,11 +1,10 @@
 const defaultLocale = 'en-US';
-let currentLocale = defaultLocale;  // Track the currently selected language
 
-function requestChatBot(loc, locale = defaultLocale) {
+function requestChatBot(loc) {
     const params = new URLSearchParams(location.search);
     const oReq = new XMLHttpRequest();
     oReq.addEventListener("load", initBotConversation);
-    var path = "/chatBot?locale=" + locale;
+    var path = "/chatBot?locale=" + extractLocale(params.get('locale'));
 
     if (loc) {
         path += "&lat=" + loc.lat + "&long=" + loc.long;
@@ -35,19 +34,21 @@ function extractLocale(localeParam) {
 function chatRequested() {
     const params = new URLSearchParams(location.search);
     if (params.has('shareLocation')) {
-        getUserLocation((location) => requestChatBot(location, currentLocale));
+        getUserLocation(requestChatBot);
     }
     else {
-        requestChatBot(undefined, currentLocale);
+        requestChatBot();
     }
 }
 
 function getUserLocation(callback) {
     navigator.geolocation.getCurrentPosition(
         function(position) {
-            const location = {
-                lat: position.coords.latitude,
-                long: position.coords.longitude
+            var latitude  = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            var location = {
+                lat: latitude,
+                long: longitude
             }
             callback(location);
         },
@@ -68,7 +69,7 @@ function initBotConversation() {
     const user = {
         id: tokenPayload.userId,
         name: tokenPayload.userName,
-        locale: currentLocale  // Use the selected locale
+        locale: tokenPayload.locale
     };
     let domain = undefined;
     if (tokenPayload.directLineURI) {
@@ -76,7 +77,7 @@ function initBotConversation() {
     }
     let location = undefined;
 
-    const botConnection = window.WebChat.createDirectLine({
+    var botConnection = window.WebChat.createDirectLine({
         token: tokenPayload.connectorToken,
         domain: domain
     });
@@ -89,7 +90,7 @@ function initBotConversation() {
         backgroundColor: '#F8F8F8'
     };
 
-    const store = window.WebChat.createStore({}, (store) => (next) => (action) => {
+    const store = window.WebChat.createStore({}, function(store) { return function(next) { return function(action) {
         if (action.type === 'DIRECT_LINE/CONNECT_FULFILLED') {
             store.dispatch({
                 type: 'DIRECT_LINE/POST_ACTIVITY',
@@ -102,7 +103,7 @@ function initBotConversation() {
                         value: {
                             jsonWebToken: jsonWebToken,
                             triggeredScenario: {
-                                trigger: "amalbot_greet",
+                                trigger: "amalbot_greet",  // Replace with your scenario ID
                                 args: {
                                     location: location,
                                     disclaimerAccepted: false
@@ -115,7 +116,7 @@ function initBotConversation() {
         }
         else if (action.type === 'DIRECT_LINE/INCOMING_ACTIVITY') {
             if (action.payload && action.payload.activity && action.payload.activity.type === "event" && action.payload.activity.name === "ShareLocationEvent") {
-                getUserLocation((location) => {
+                getUserLocation(function (location) {
                     store.dispatch({
                         type: 'WEB_CHAT/SEND_POST_BACK',
                         payload: { value: JSON.stringify(location) }
@@ -124,7 +125,7 @@ function initBotConversation() {
             }
         }
         return next(action);
-    });
+    }}});
 
     const webchatOptions = {
         directLine: botConnection,
@@ -141,13 +142,4 @@ function initBotConversation() {
 function startChat(user, webchatOptions) {
     const botContainer = document.getElementById('webchat');
     window.WebChat.renderWebChat(webchatOptions, botContainer);
-}
-
-// Language switch function
-function switchLanguage() {
-    const languageSelect = document.getElementById('languageSelect');
-    currentLocale = languageSelect.value;
-
-    document.getElementById('webchat').innerHTML = '';  // Clear chat
-    chatRequested();  // Reload chat with new language
 }
