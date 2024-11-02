@@ -54,7 +54,7 @@ body {
     display: flex;
     align-items: center;
     padding: 10px;
-  font-family: 'Segoe Semibold', Calibri, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Segoe Semibold';
 }
 
 .header-logo {
