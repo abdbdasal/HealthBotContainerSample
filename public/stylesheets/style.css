@@ -12,7 +12,7 @@ body {
 
 #webchat[watermark="false"] [role="complementary"] ul[role="list"]::after {
   content: "Powered By Carevison";
-  background: linear-gradient(rgba(248, 248, 248, 0), rgba(248, 248, 248, .63), #F8F8F8 40%);
+  background: linear-gradient(rgba(248, 248, 248, 0), rgba(248, 248, 248, .63), #1ea1d6 40%);
   bottom: 0;
   right: 0;
   color: #707070;
