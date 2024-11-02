@@ -88,6 +88,25 @@ function initBotConversation() {
         botAvatarInitials: 'Amal',
         userAvatarInitials: 'You',
         backgroundColor: '#F8F8F8'
+        // Colors for bubbles
+    bubbleBackground: '#E5E5EA', // Bot bubble (light gray)
+    bubbleTextColor: '#000000',
+    userBubbleBackground: '#007AFF', // User bubble (iMessage blue)
+    userBubbleTextColor: '#FFFFFF',
+
+    // Bubble shape and spacing
+    bubbleBorderRadius: 20, // Rounded corners
+    bubbleFromUserBorderRadius: 20, // Rounded corners for user messages
+
+    // Font styling
+    fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif",
+    fontSize: '16px',
+
+    // Background color (optional)
+    backgroundColor: '#F2F2F7',
+
+    // Hide watermark (optional)
+    hideWatermark: true
     };
 
     const store = window.WebChat.createStore({}, function(store) { return function(next) { return function(action) {
