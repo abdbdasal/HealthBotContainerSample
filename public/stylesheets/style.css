@@ -2,16 +2,16 @@ html, body {
   height: 100%;
 }
 body {
-  margin: 30%;
+  margin: 0%;
 }
 
 #webchat {
-  height: 80%;
-  width: 80%;
+  height: 100%;
+  width: 100%;
 }
 
 #webchat[watermark="false"] [role="complementary"] ul[role="list"]::after {
-  content: "Powered By ...";
+  content: "Powered By Carevison";
   background: linear-gradient(rgba(248, 248, 248, 0), rgba(248, 248, 248, .63), #F8F8F8 40%);
   bottom: 0;
   right: 0;
@@ -38,8 +38,8 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto; /* Header, main chat, footer */
     grid-template-columns: 1fr 4fr; /* Side menu and chat area */
-    max-width: 800px;
-    height: 600px; /* Adjust height as needed */
+    max-width: 100%;
+    height: 100%; /* Adjust height as needed */
     margin: 0 auto;
     border: 1px solid #ccc;
     border-radius: 10px;
