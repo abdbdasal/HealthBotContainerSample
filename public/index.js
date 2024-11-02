@@ -87,7 +87,7 @@ function initBotConversation() {
         hideSendBox: false,
         botAvatarInitials: 'Amal',
         userAvatarInitials: 'You',
-        backgroundColor: '#F8F8F8'
+        backgroundColor: '#F8F8F8',
         // Colors for bubbles
     bubbleBackground: '#E5E5EA', // Bot bubble (light gray)
     bubbleTextColor: '#000000',
