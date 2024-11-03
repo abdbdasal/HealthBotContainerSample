@@ -49,7 +49,7 @@ body {
 /* Header styling */
 .chat-header {
     grid-column: 1 / span 2;
-    background-color: #1AE1D6;
+    background-color: #3399cc;
     color: white;
     display: flex;
     align-items: center;
@@ -65,7 +65,7 @@ body {
 /* Side menu styling */
 .chat-menu {
     grid-row: 1 / span 1;
-    background-color: #1AE1D6;
+    background-color: #3399cc;
     padding: 10px;
     border-right: 1px solid #ccc;
 }
@@ -96,11 +96,11 @@ body {
 /* Footer styling */
 .chat-footer {
     grid-column: 1 / span 2;
-    text-align: center;
-    background-color: #1AE1D6;
+    text-align: left;
+    background-color: #3399cc;
     padding: 10px;
-    font-size: 0.8em;
-    color: #666;
+    font-size: 1em;
+    color: white;
     font-family: 'Segoe Semibold', Calibri, 'Helvetica Neue', Arial, sans-serif !important;
 }
 
