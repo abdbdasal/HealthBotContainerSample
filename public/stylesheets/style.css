@@ -23,6 +23,7 @@ body {
   position: absolute;
   position: sticky;
   text-align: right;
+  
 }
 
 #webchat[watermark="false"] .webchat__scrollToEndButton {
@@ -44,6 +45,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
+    margin-right: 20px;
   /* 2024-11-03
   /* This selector might vary depending on your Web Chat version */
 .webchat__bubble__button {
