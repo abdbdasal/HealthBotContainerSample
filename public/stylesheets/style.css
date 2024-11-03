@@ -12,7 +12,7 @@ body {
 
 #webchat[watermark="false"] [role="complementary"] ul[role="list"]::after {
   content: "Powered By Carevison";
-  background: linear-gradient(rgba(248, 248, 248, 0), rgba(248, 248, 248, .63), #1ea1d6 40%);
+  background: linear-gradient(rgba(248, 248, 248, 0), rgba(248, 248, 248, .63), #1AE1D6 40%);
   bottom: 0;
   right: 0;
   color: #707070;
@@ -64,9 +64,9 @@ body {
 
 /* Side menu styling */
 .chat-menu {
-    grid-row: 2 / span 1;
+    grid-row: 1 / span 1;
     background-color: #F2F2F7;
-    padding: 15px;
+    padding: 10px;
     border-right: 1px solid #ccc;
 }
 
