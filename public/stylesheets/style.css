@@ -49,7 +49,7 @@ body {
 /* Header styling */
 .chat-header {
     grid-column: 1 / span 2;
-    background-color: #1ea1d6;
+    background-color: #1AE1D6;
     color: white;
     display: flex;
     align-items: center;
@@ -97,9 +97,10 @@ body {
 .chat-footer {
     grid-column: 1 / span 2;
     text-align: center;
-    background-color: #F2F2F7;
+    background-color: #1AE1D6;
     padding: 10px;
     font-size: 0.8em;
     color: #666;
+    font-family: 'Segoe Semibold';
 }
 
