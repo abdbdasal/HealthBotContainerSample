@@ -25,7 +25,7 @@ body {
   text-align: right;
 }
 
-#webchat[watermark="true"] .webchat__scrollToEndButton {
+#webchat[watermark="false"] .webchat__scrollToEndButton {
   bottom: 32px;
   left: 50%;
   right: unset;
@@ -44,6 +44,30 @@ body {
     border: 1px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
+  /* 2024-11-03
+  /* This selector might vary depending on your Web Chat version */
+.webchat__bubble__button {
+    background-color: #00a2ff; /* Set your preferred background color */
+    color: white; /* Change the text color */
+    border-radius: 12px; /* Adds curves to the button */
+    padding: 10px 15px;
+    border: none; /* Removes any default borders */
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease; /* Adds a hover effect */
+}
+
+.webchat__bubble__button:hover {
+    background-color: #007abf; /* Darker shade on hover */
+}
+
+/* Optional styling for focus (when clicked) */
+.webchat__bubble__button:focus {
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 162, 255, 0.6);
+}
+/* end 2024-11-03
 }
 
 /* Header styling */
