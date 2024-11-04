@@ -1,4 +1,4 @@
-const defaultLocale = 'ar-SA';
+const defaultLocale = 'En-US';
 
 function requestChatBot(loc) {
     const params = new URLSearchParams(location.search);
