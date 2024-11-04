@@ -38,7 +38,7 @@ body {
 .chat-container {
     display: grid;
     grid-template-rows: auto 1fr auto; /* Header, main chat, footer */
-    grid-template-columns: 4fr ; /* Side menu and chat area */
+    grid-template-columns: 0.1fr 4fr auto; /* Side menu and chat area */
     max-width: 100%;
     height: 100%; /* Adjust height as needed */
     margin: 5% auto;
