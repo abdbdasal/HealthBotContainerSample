@@ -19,7 +19,6 @@ body {
   display: block;
   font-family: 'Segoe Semibold', Calibri, 'Helvetica Neue', Arial, sans-serif;
   font-size: 12px;
-  padding: 15px 10px 10px;
   position: absolute;
   position: sticky;
   text-align: right;
@@ -79,7 +78,6 @@ body {
     color: white;
     display: flex;
     align-items: center;
-    padding: 10px;
     font-family: 'Segoe Semibold', Calibri, 'Helvetica Neue', Arial, sans-serif !important;
 }
 
@@ -92,17 +90,15 @@ body {
 .chat-menu {
     grid-row: 1 / span 1;
     background-color: #3399cc;
-    padding: 10px;
     border-right: 1px solid #ccc;
 }
 
 .chat-menu ul {
     list-style: none;
-    padding: 0;
 }
 
 .chat-menu li {
-    margin: 10px 0;
+    margin: 10px 10px;
 }
 
 .chat-menu a {
@@ -114,7 +110,6 @@ body {
 /* Chat area styling */
 #webchat {
     grid-column: 2 / span 1;
-    padding: 10px;
     background-color: #ffffff;
     overflow-y: auto;
 }
