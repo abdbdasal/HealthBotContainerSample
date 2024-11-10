@@ -1,57 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
-    <script src="index.js"></script>
-    <link href="stylesheets/style.css" rel="stylesheet" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Amal AI Triage Chatbot</title>
+
+    <!-- Bot Framework WebChat -->
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="index.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet" />
+
 </head>
 <body>
     <div class="chat-container">
+
         <!-- Header with logo -->
-            <header class="chat-header">
+        <header class="chat-header">
             <img src="https://raw.githubusercontent.com/abdbdasal/HealthBotContainerSample/refs/heads/master/logo-150-px-white.png" alt="Logo" class="header-logo">
             <h1>Welcome to Amal AI Triage</h1>
-              </header>
+        </header>
 
-        <!-- Side menu -->
-
-
-        <!-- Chat bot interface -->
+        <!-- Chatbot Interface -->
         <main id="webchat" role="main"></main>
 
-  <!-- Footer -->
-<footer class="chat-footer" style="text-align: center; padding: 10px; border-top: 1px solid #ddd;">
-
-    <div style="display: flex; justify-content: center; gap: 20px; margin-top: 5px;">
-        <div style="display: flex; align-items: center;">
-                <p>Powered by <a href="https://carevison.com" target="_blank" rel="noopener noreferrer">Carevison.com</a></p>
-        </div>
-    
-    
-    
-    <div style="display: flex; justify-content: center; gap: 20px; margin-top: 5px;">
-        <div style="display: flex; align-items: center;">
-            <img src="https://raw.githubusercontent.com/abdbdasal/HealthBotContainerSample/refs/heads/master/hipaa.svg" alt="HIPAA Logo" style="width: 20px; margin-right: 5px;">
-            <span>HIPAA Compliant</span>
-        </div>
-        <div style="display: flex; align-items: center;">
-            <img src="https://raw.githubusercontent.com/abdbdasal/HealthBotContainerSample/refs/heads/master/GDPR.svg" alt="GDPR Logo" style="width: 20px; margin-right: 5px;">
-            <span>GDPR Compliant</span>
-        </div>
-        
-        <div style="display: flex; align-items: center;">
-            <a href="https://amalaitriage.azurewebsites.net/terms.html" target="_blank" rel="noopener noreferrer">Terms of Service</a>
-        </div>
-                <div style="display: flex; align-items: center;">
-            <a href="https://amalaitriage.azurewebsites.net/privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-        </div>
-        
-        
-    </div>
-</footer>
+        <!-- Footer -->
+        <footer class="chat-footer">
+            <div class="footer-content">
+                <div class="footer-item">
+                    <p>Powered by <a href="https://carevison.com" target="_blank" rel="noopener noreferrer">Carevision.com</a></p>
+                </div>
+                <div class="footer-item">
+                    <img src="https://raw.githubusercontent.com/abdbdasal/HealthBotContainerSample/refs/heads/master/hipaa.svg" alt="HIPAA Logo" class="footer-icon">
+                    <span>HIPAA Compliant</span>
+                </div>
+                <div class="footer-item">
+                    <img src="https://raw.githubusercontent.com/abdbdasal/HealthBotContainerSample/refs/heads/master/GDPR.svg" alt="GDPR Logo" class="footer-icon">
+                    <span>GDPR Compliant</span>
+                </div>
+                <div class="footer-item">
+                    <a href="https://amalaitriage.azurewebsites.net/terms.html" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+                </div>
+                <div class="footer-item">
+                    <a href="https://amalaitriage.azurewebsites.net/privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                </div>
+            </div>
+        </footer>
 
     </div>
-    <script>chatRequested();</script>
+
+    <!-- Call chat initiation -->
+    <script>
+        chatRequested(); // Initialize the chatbot
+    </script>
 </body>
 </html>
