@@ -122,7 +122,7 @@ function initBotConversation() {
                         value: {
                             jsonWebToken: jsonWebToken,
                             triggeredScenario: {
-                                trigger: "amalbot_greet",  // Replace with your scenario ID
+                                trigger: "aitriagegreeting",  // Replace with your scenario ID
                                 args: {
                                     location: location,
                                     disclaimerAccepted: false
