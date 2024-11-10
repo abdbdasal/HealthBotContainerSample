@@ -9,7 +9,6 @@ body {
   height: 100%;
   width: 100%;
 }
-
 #webchat[watermark="false"] [role="complementary"] ul[role="list"]::after {
   content: "Powered By Carevison";
   background: linear-gradient(rgba(248, 248, 248, 0), rgba(248, 248, 248, .63), #1AE1D6 40%);
