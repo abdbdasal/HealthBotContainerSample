@@ -88,14 +88,44 @@ body {
     margin-right: 10px;
 }
 
+/* Side menu styling */
+.chat-menu {
+    grid-row: 1 / span 1;
+    background-color: #3399cc;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+}
+
+.chat-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.chat-menu li {
+    margin: 10px 0;
+}
+
+.chat-menu a {
+    text-decoration: none;
+    color: #007AFF;
+    font-weight: bold;
+}
+
+/* Chat area styling */
+#webchat {
+    grid-column: 2 / span 1;
+    padding: 10px;
+    background-color: #ffffff;
+    overflow-y: auto;
+}
 
 /* Footer styling */
 .chat-footer {
     grid-column: 1 / span 2;
-    text-align: center;
+    text-align: left;
     background-color: #3399cc;
     padding: 10px;
-    font-size: 10px;
+    font-size: 1em;
     color: white;
     font-family: 'Segoe Semibold', Calibri, 'Helvetica Neue', Arial, sans-serif !important;
 }
