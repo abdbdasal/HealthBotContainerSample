@@ -92,10 +92,10 @@ body {
 /* Footer styling */
 .chat-footer {
     grid-column: 1 / span 2;
-    text-align: left;
+    text-align: center;
     background-color: #3399cc;
     padding: 10px;
-    font-size: 1em;
+    font-size: 10px;
     color: white;
     font-family: 'Segoe Semibold', Calibri, 'Helvetica Neue', Arial, sans-serif !important;
 }
