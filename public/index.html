@@ -1,48 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-    
+<html>
 <head>
     <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
     <script src="index.js"></script>
     <link href="stylesheets/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
-
 <body>
-    <!-- Header with logo -->
-        <header class="chat-header">
-            <img src="https://raw.githubusercontent.com/abdbdasal/HealthBotContainerSample/refs/heads/master/logo-150-px-white.png" alt="Logo" class="header-logo">
-            <h1>Welcome to Amal AI Triage</h1>
-        </header>
-        <!-- Chatbot Interface -->
-        <main id="webchat" role="main"></main>
-
-        <!-- Footer -->
-        <footer class="chat-footer">
-            <div class="footer-content">
-                <div class="footer-item">
-                    <p>Powered by <a href="https://carevison.com" target="_blank" rel="noopener noreferrer">Carevision.com</a></p>
-                </div>
-                <div class="footer-item">
-                    <img src="https://raw.githubusercontent.com/abdbdasal/HealthBotContainerSample/refs/heads/master/hipaa.svg" alt="HIPAA Logo" class="footer-icon">
-                    <span>HIPAA Compliant</span>
-                </div>
-                <div class="footer-item">
-                    <img src="https://raw.githubusercontent.com/abdbdasal/HealthBotContainerSample/refs/heads/master/GDPR.svg" alt="GDPR Logo" class="footer-icon">
-                    <span>GDPR Compliant</span>
-                </div>
-                <div class="footer-item">
-                    <a href="https://amalaitriage.azurewebsites.net/terms.html" target="_blank" rel="noopener noreferrer">Terms of Service</a>
-                </div>
-                <div class="footer-item">
-                    <a href="https://amalaitriage.azurewebsites.net/privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-                </div>
-            </div>
-        </footer>
-    </div>
-
-    <!-- Call chat initiation -->
-    <script>
-        chatRequested(); // Initialize the chatbot
-    </script>
+<div id="webchat" role="main" watermark="false"></div>
+<script>chatRequested();</script>
 </body>
 </html>
