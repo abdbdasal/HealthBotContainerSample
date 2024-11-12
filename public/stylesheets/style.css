@@ -2,7 +2,7 @@ html, body {
   height: 100%;
 }
 body {
-  margin: 0;
+  margin: 0%;
 }
 
 #webchat {
@@ -10,9 +10,9 @@ body {
   width: 100%;
 }
 
-#webchat[watermark="true"] [role="complementary"] ul[role="list"]::after {
-  content: "Powered By ...";
-  background: linear-gradient(rgba(248, 248, 248, 0), rgba(248, 248, 248, .63), #F8F8F8 40%);
+#webchat[watermark="false"] [role="complementary"] ul[role="list"]::after {
+  content: "Powered By Carevison";
+  background: linear-gradient(rgba(248, 248, 248, 0), rgba(248, 248, 248, .63), #1AE1D6 40%);
   bottom: 0;
   right: 0;
   color: #707070;
@@ -23,11 +23,89 @@ body {
   position: absolute;
   position: sticky;
   text-align: right;
+  
 }
 
-#webchat[watermark="true"] .webchat__scrollToEndButton {
+#webchat[watermark="false"] .webchat__scrollToEndButton {
   bottom: 32px;
   left: 50%;
   right: unset;
   transform: translate(-50%, 0);
 }
+
+
+/* Chat container */
+.chat-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, main chat, footer */
+    grid-template-columns: 0.1fr 4fr auto; /* Side menu and chat area */
+    max-width: 100%;
+    height: 100%; /* Adjust height as needed */
+    margin: 5% auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    
+  /* 2024-11-03
+  /* This selector might vary depending on your Web Chat version */
+.webchat__bubble__button {
+    background-color: #00a2ff; /* Set your preferred background color */
+    color: white; /* Change the text color */
+    border-radius: 12px; /* Adds curves to the button */
+    padding: 10px 15px;
+    border: none; /* Removes any default borders */
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease; /* Adds a hover effect */
+}
+
+.webchat__bubble__button:hover {
+    background-color: #007abf; /* Darker shade on hover */
+}
+
+/* Optional styling for focus (when clicked) */
+.webchat__bubble__button:focus {
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 162, 255, 0.6);
+}
+/* end 2024-11-03
+}
+
+/* Header styling */
+.chat-header {
+    grid-column: 1 / span 2;
+    background-color: #3399cc;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Segoe Semibold', Calibri, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+.header-logo {
+    height: 100px;
+    margin-right: 10px;
+}
+
+
+
+/* Chat area styling */
+#webchat {
+    grid-column: 2 / span 1;
+    padding: 10px;
+    background-color: #ffffff;
+    overflow-y: auto;
+}
+
+/* Footer styling */
+.chat-footer {
+    grid-column: 1 / span 2;
+    text-align: left;
+    background-color: #3399cc;
+    padding: 10px;
+    font-size: 1em;
+    color: white;
+    font-family: 'Segoe Semibold', Calibri, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
