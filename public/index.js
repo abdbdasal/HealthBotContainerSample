@@ -83,7 +83,7 @@ function initBotConversation() {
     });
 
     const styleOptions = {
-        botAvatarImage: 'https://raw.githubusercontent.com/abdbdasal/HealthBotContainerSample/refs/heads/master/Amal-Fav-Icon-100px.png',
+        botAvatarImage: 'https://raw.githubusercontent.com/abdbdasal/HealthBotContainerSample/refs/heads/amalscreeningbot/Amal-Fav-Icon-100px.png',
         hideSendBox: false,
         botAvatarInitials: 'Amal',
         userAvatarInitials: 'You',
