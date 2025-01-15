@@ -122,7 +122,7 @@ function initBotConversation() {
                         value: {
                             jsonWebToken: jsonWebToken,
                             triggeredScenario: {
-                                trigger: "aitriagegreeting",  // Replace with your scenario ID
+                                trigger: "Answers_Based_On_Credible_Sources",  // Replace with your scenario ID
                                 args: {
                                     location: location,
                                     disclaimerAccepted: false
