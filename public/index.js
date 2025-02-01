@@ -121,13 +121,13 @@ function initBotConversation() {
                         locale: user.locale,
                         value: {
                             jsonWebToken: jsonWebToken,
-                           /* triggeredScenario: {
+                            triggeredScenario: {
                                 trigger: "Extend_triage_with_handoff",  // Replace with your scenario ID
                                 args: {
                                     location: location,
                                     disclaimerAccepted: false
                                 }
-                            }*/
+                            }
                         }
                     }
                 }
